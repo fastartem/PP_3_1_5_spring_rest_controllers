@@ -2,6 +2,7 @@ package com.example.SpringBootstrap.web.dao.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import com.example.SpringBootstrap.web.model.User;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +13,11 @@ public class UserDaoImp implements UserDao {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     public void add(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
     }
 
@@ -25,7 +30,7 @@ public class UserDaoImp implements UserDao {
         entity.setLastname(user.getLastname());
         entity.setEmail(user.getEmail());
         entity.setRoles(user.getRoles());
-        entity.setPassword(user.getPassword());
+        entity.setPassword(passwordEncoder.encode(user.getPassword()));
     }
 
     public List<User> listUsers() {
