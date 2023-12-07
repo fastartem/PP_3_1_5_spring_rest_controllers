@@ -25,10 +25,10 @@
         <td th:utext="${user.getEmail()}">Email</td>
         <td th:utext="${user.getPassword()}"></td>
         <td th:utext="${user.getRoles()}"></td>
-        <td><a th:href="@{/user-update(id=${user.getId()})}">Update</a></td>
-        <td><a th:href="@{/user-delete(id=${user.getId()})}">Delete</a></td>
+        <td><a th:href="@{/admin/user-update(id=${user.getId()})}">Update</a></td>
+        <td><a th:href="@{/admin/user-delete(id=${user.getId()})}">Delete</a></td>
     </tr>
-    <p><a href="/user-add">Add user</a></p>
+    <p><a href="/admin/user-add">Add user</a></p>
     <form method="GET" action="/logout">
         <input type="submit" value="Exit">
     </form>

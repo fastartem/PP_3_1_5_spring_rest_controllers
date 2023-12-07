@@ -9,9 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
@@ -19,13 +17,14 @@ import java.util.List;
 import java.util.Set;
 
 @Controller
+@RequestMapping("/admin")
 public class AdminController {
     @Autowired
     private UserService userService;
     @Autowired
     RoleService roleService;
 
-    @GetMapping("/admin")
+    @GetMapping
     public String printUsers(Model model) {
         model.addAttribute("users", userService.listUsers());
         return "admin";
@@ -83,7 +82,7 @@ public class AdminController {
 
         if (bindingResult.hasErrors()) {
             modelAndView.addObject("roles", roleService.listRoles());
-            modelAndView.setViewName("/user-update");
+            modelAndView.setViewName("user-update");
             return modelAndView;
         }
 
