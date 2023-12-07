@@ -1,7 +1,7 @@
 package com.example.SpringBootstrap.web.service;
 
 import com.example.SpringBootstrap.web.model.Role;
-import com.example.SpringBootstrap.web.dao.RoleDao;
+import com.example.SpringBootstrap.web.dao.role.RoleDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +22,6 @@ public class RoleServiceImp implements RoleService {
         return roleDao.listRoles();
     }
 
-    @Override
     public Set<Role> getRoleSetByName(String[] roles) {
         return roleDao.getRoleSetByName(roles);
     }

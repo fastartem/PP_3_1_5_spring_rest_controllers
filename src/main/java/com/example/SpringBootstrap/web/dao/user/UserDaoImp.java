@@ -1,20 +1,19 @@
-package com.example.SpringBootstrap.web.dao;
+package com.example.SpringBootstrap.web.dao.user;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.example.SpringBootstrap.web.model.User;
+import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
-@Repository
+@Service
 public class UserDaoImp implements UserDao {
 
-    @PersistenceContext
-    EntityManager entityManager;
+    @Autowired
+    private UserRepository userRepository;
 
     public void add(User user) {
-        entityManager.persist(user);
+        userRepository.save(user);
     }
 
     public void update(User user) {
@@ -30,20 +29,18 @@ public class UserDaoImp implements UserDao {
     }
 
     public List<User> listUsers() {
-        return entityManager.createQuery("SELECT u FROM User u").getResultList();
+        return (List<User>) userRepository.findAll();
     }
 
     public void delete(Long id) {
-        entityManager.createQuery("delete from User u where u.id=:id")
-                .setParameter("id", id).executeUpdate();
+        userRepository.deleteById(id);
     }
 
     public User findById(Long id) {
-        return entityManager.find(User.class, id);
+        return userRepository.findById(id).orElse(null);
     }
 
     public User getUserByName(String username) {
-        return (User) entityManager.createQuery("SELECT u FROM User u where u.username=:username")
-                .setParameter("username", username).getSingleResult();
+        return userRepository.findByUsername(username);
     }
 }

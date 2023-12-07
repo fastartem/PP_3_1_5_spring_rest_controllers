@@ -1,4 +1,4 @@
-package com.example.SpringBootstrap.web.dao;
+package com.example.SpringBootstrap.web.dao.user;
 
 import com.example.SpringBootstrap.web.model.User;
 

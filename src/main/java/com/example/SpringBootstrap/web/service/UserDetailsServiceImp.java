@@ -1,6 +1,6 @@
 package com.example.SpringBootstrap.web.service;
 
-import com.example.SpringBootstrap.web.dao.UserDao;
+import com.example.SpringBootstrap.web.dao.user.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
