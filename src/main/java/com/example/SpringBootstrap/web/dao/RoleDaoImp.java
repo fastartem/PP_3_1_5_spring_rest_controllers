@@ -1,7 +1,7 @@
-package com.example.SpringBootSecurity.web.model;
+package com.example.SpringBootstrap.web.dao;
 
+import com.example.SpringBootstrap.web.model.Role;
 import org.springframework.stereotype.Repository;
-import com.example.SpringBootSecurity.web.model.Role;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

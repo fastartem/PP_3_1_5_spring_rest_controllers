@@ -1,7 +1,7 @@
-package com.example.SpringBootSecurity.web.service;
+package com.example.SpringBootstrap.web.service;
 
-import com.example.SpringBootSecurity.web.model.Role;
-import com.example.SpringBootSecurity.web.model.RoleDao;
+import com.example.SpringBootstrap.web.model.Role;
+import com.example.SpringBootstrap.web.dao.RoleDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

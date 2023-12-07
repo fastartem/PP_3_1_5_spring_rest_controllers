@@ -1,7 +1,7 @@
-package com.example.SpringBootSecurity.web.controller;
+package com.example.SpringBootstrap.web.controller;
 
-import com.example.SpringBootSecurity.web.model.User;
-import com.example.SpringBootSecurity.web.service.UserService;
+import com.example.SpringBootstrap.web.model.User;
+import com.example.SpringBootstrap.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;

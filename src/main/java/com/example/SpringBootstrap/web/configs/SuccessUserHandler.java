@@ -1,6 +1,6 @@
-package com.example.SpringBootSecurity.web.configs;
+package com.example.SpringBootstrap.web.configs;
 
-import com.example.SpringBootSecurity.web.service.UserService;
+import com.example.SpringBootstrap.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;

@@ -1,4 +1,4 @@
-package com.example.SpringBootSecurity.web.configs;
+package com.example.SpringBootstrap.web.configs;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

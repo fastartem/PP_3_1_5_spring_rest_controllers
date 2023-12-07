@@ -1,7 +1,7 @@
-package com.example.SpringBootSecurity.web.dao;
+package com.example.SpringBootstrap.web.dao;
 
 import org.springframework.stereotype.Repository;
-import com.example.SpringBootSecurity.web.model.User;
+import com.example.SpringBootstrap.web.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

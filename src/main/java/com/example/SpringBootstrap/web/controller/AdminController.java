@@ -1,9 +1,9 @@
-package com.example.SpringBootSecurity.web.controller;
+package com.example.SpringBootstrap.web.controller;
 
-import com.example.SpringBootSecurity.web.model.Role;
-import com.example.SpringBootSecurity.web.model.User;
-import com.example.SpringBootSecurity.web.service.RoleService;
-import com.example.SpringBootSecurity.web.service.UserService;
+import com.example.SpringBootstrap.web.model.Role;
+import com.example.SpringBootstrap.web.model.User;
+import com.example.SpringBootstrap.web.service.RoleService;
+import com.example.SpringBootstrap.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

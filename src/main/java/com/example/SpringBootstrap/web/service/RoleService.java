@@ -1,6 +1,6 @@
-package com.example.SpringBootSecurity.web.service;
+package com.example.SpringBootstrap.web.service;
 
-import com.example.SpringBootSecurity.web.model.Role;
+import com.example.SpringBootstrap.web.model.Role;
 
 import java.util.List;
 import java.util.Set;

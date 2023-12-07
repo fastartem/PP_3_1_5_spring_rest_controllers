@@ -1,10 +1,10 @@
-package com.example.SpringBootSecurity.web.service;
+package com.example.SpringBootstrap.web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.SpringBootSecurity.web.dao.UserDao;
-import com.example.SpringBootSecurity.web.model.User;
+import com.example.SpringBootstrap.web.dao.UserDao;
+import com.example.SpringBootstrap.web.model.User;
 
 import java.util.List;
 

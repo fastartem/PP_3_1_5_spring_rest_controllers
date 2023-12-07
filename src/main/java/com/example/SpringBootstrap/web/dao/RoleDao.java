@@ -1,4 +1,6 @@
-package com.example.SpringBootSecurity.web.model;
+package com.example.SpringBootstrap.web.dao;
+
+import com.example.SpringBootstrap.web.model.Role;
 
 import java.util.List;
 import java.util.Set;
