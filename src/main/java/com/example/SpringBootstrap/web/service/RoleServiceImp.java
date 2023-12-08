@@ -26,6 +26,7 @@ public class RoleServiceImp implements RoleService {
         return roleRepository.findIdByRole(role);
     }
 
+    @Override
     public Set<Role> getRoleSetByName(String[] roles) {
         return Arrays.stream(roles)
                 .filter(Objects::nonNull)

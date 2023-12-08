@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Service("userService")
+@Service
 public class UserServiceImp implements UserService {
 
     @Autowired
@@ -19,12 +19,14 @@ public class UserServiceImp implements UserService {
     private PasswordEncoder passwordEncoder;
 
     @Transactional
+    @Override
     public void add(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
     }
 
     @Transactional
+    @Override
     public void update(User user) {
         User entity = findById(user.getId());
 
@@ -36,20 +38,23 @@ public class UserServiceImp implements UserService {
         entity.setRoles(user.getRoles());
         entity.setPassword(passwordEncoder.encode(user.getPassword()));
     }
-
+    @Override
     public List<User> listUsers() {
         return (List<User>) userRepository.findAll();
     }
 
     @Transactional
+    @Override
     public void delete(Long id) {
         userRepository.deleteById(id);
     }
 
+    @Override
     public User findById(Long id) {
         return userRepository.findById(id).orElse(null);
     }
 
+    @Override
     public User getUserByName(String username) {
         return userRepository.findByUsername(username);
     }
