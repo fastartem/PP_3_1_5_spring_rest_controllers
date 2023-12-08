@@ -13,8 +13,11 @@ import java.util.stream.Collectors;
 
 @Service
 public class RoleServiceImp implements RoleService {
-    @Autowired
-    private RoleRepository roleRepository;
+    private final RoleRepository roleRepository;
+
+    public RoleServiceImp(RoleRepository roleRepository) {
+        this.roleRepository = roleRepository;
+    }
 
     @Override
     public List<Role> listRoles() {

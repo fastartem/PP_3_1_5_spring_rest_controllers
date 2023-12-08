@@ -20,10 +20,13 @@ import java.util.Set;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
-    @Autowired
-    private UserService userService;
-    @Autowired
-    RoleService roleService;
+    private final UserService userService;
+    private final RoleService roleService;
+
+    public AdminController(UserService userService, RoleService roleService) {
+        this.userService = userService;
+        this.roleService = roleService;
+    }
 
     @GetMapping
     public String printUsers(@AuthenticationPrincipal User user, Model model) {
