@@ -1,6 +1,6 @@
 package com.example.SpringBootstrap.web.service;
 
-import com.example.SpringBootstrap.web.dao.user.UserDao;
+import com.example.SpringBootstrap.web.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,17 +12,17 @@ import javax.transaction.Transactional;
 @Service
 public class UserDetailsServiceImp implements UserDetailsService {
 
-    private final UserDao userDao;
+    private final UserRepository userRepository;
 
     @Autowired
-    public UserDetailsServiceImp(UserDao userDao) {
-        this.userDao = userDao;
+    public UserDetailsServiceImp(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @Transactional
     @Override
     public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-        return userDao.getUserByName(name);
+        return userRepository.findByUsername(name);
     }
 
 

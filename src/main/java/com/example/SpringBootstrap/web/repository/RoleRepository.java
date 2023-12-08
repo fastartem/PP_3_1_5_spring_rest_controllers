@@ -1,4 +1,4 @@
-package com.example.SpringBootstrap.web.dao.role;
+package com.example.SpringBootstrap.web.repository;
 
 import com.example.SpringBootstrap.web.model.Role;
 import org.springframework.data.jpa.repository.Query;
