@@ -1,8 +1,7 @@
-package com.example.SpringBootstrap.web.service;
+package com.example.SpringRestControllers.web.service;
 
-import com.example.SpringBootstrap.web.model.Role;
-import com.example.SpringBootstrap.web.repository.RoleRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.SpringRestControllers.web.model.Role;
+import com.example.SpringRestControllers.web.repository.RoleRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -30,10 +29,10 @@ public class RoleServiceImp implements RoleService {
     }
 
     @Override
-    public Set<Role> getRoleSetByName(String[] roles) {
-        return Arrays.stream(roles)
+    public Set<Role> getRoleSetWithActualIds(Set<Role> roles) {
+        return roles.stream()
                 .filter(Objects::nonNull)
-                .map(r -> new Role(getIdByRole(r), r))
+                .map(r -> new Role(getIdByRole(r.getRole()), r.getRole()))
                 .collect(Collectors.toSet());
     }
 }

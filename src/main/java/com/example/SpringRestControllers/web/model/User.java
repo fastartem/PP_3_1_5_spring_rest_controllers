@@ -1,4 +1,4 @@
-package com.example.SpringBootstrap.web.model;
+package com.example.SpringRestControllers.web.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

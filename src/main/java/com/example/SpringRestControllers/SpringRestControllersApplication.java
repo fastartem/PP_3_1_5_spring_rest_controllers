@@ -1,13 +1,13 @@
-package com.example.SpringBootstrap;
+package com.example.SpringRestControllers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootstrapApplication {
+public class SpringRestControllersApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootstrapApplication.class, args);
+		SpringApplication.run(SpringRestControllersApplication.class, args);
 	}
 
 }

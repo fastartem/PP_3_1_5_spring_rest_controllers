@@ -1,4 +1,4 @@
-package com.example.SpringBootstrap.web.model;
+package com.example.SpringRestControllers.web.model;
 
 import org.springframework.security.core.GrantedAuthority;
 
@@ -34,6 +34,12 @@ public class Role implements GrantedAuthority {
         this.id = id;
         this.role = role;
     }
+
+    public Role(String role){
+        this.id = 13L;
+        this.role = role;
+    }
+
 
     public Long getId() {
         return id;

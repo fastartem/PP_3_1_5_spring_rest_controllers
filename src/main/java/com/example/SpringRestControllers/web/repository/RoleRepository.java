@@ -1,6 +1,6 @@
-package com.example.SpringBootstrap.web.repository;
+package com.example.SpringRestControllers.web.repository;
 
-import com.example.SpringBootstrap.web.model.Role;
+import com.example.SpringRestControllers.web.model.Role;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

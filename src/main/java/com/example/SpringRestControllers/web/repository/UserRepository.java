@@ -1,6 +1,6 @@
-package com.example.SpringBootstrap.web.repository;
+package com.example.SpringRestControllers.web.repository;
 
-import com.example.SpringBootstrap.web.model.User;
+import com.example.SpringRestControllers.web.model.User;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

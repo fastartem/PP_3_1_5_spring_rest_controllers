@@ -1,8 +1,7 @@
-package com.example.SpringBootstrap.web.service;
+package com.example.SpringRestControllers.web.service;
 
-import com.example.SpringBootstrap.web.model.User;
-import com.example.SpringBootstrap.web.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.SpringRestControllers.web.model.User;
+import com.example.SpringRestControllers.web.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,8 +37,11 @@ public class UserServiceImp implements UserService {
         entity.setLastname(user.getLastname());
         entity.setEmail(user.getEmail());
         entity.setRoles(user.getRoles());
-        entity.setPassword(passwordEncoder.encode(user.getPassword()));
+        if (!user.getPassword().equals(entity.getPassword())) {
+            entity.setPassword(passwordEncoder.encode(user.getPassword()));
+        }
     }
+
     @Override
     public List<User> listUsers() {
         return (List<User>) userRepository.findAll();

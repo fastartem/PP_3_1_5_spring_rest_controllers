@@ -1,6 +1,6 @@
-package com.example.SpringBootstrap.web.service;
+package com.example.SpringRestControllers.web.service;
 
-import com.example.SpringBootstrap.web.repository.UserRepository;
+import com.example.SpringRestControllers.web.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
