@@ -1,7 +1,6 @@
 package com.example.SpringRestControllers.web.controller;
 
 import com.example.SpringRestControllers.web.model.User;
-import com.example.SpringRestControllers.web.service.UserService;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
